@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/song_bg"
+    android:gravity="center_horizontal"
+    tools:context=".Player">
+
+    <TextView
+        android:id="@+id/tv_nowplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now Playing"
+        android:textColor="@color/white"
+        android:fontFamily="@font/data_latin"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="60sp"/>
+    <TextView
+        android:id="@+id/tv_sn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="SONG TITLE - ARTIST"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"/>
+
+    <ImageView
+        android:id="@+id/iv_music"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginTop="20sp"
+        android:src="@drawable/ic_music"/>
+
+    <SeekBar
+        android:id="@+id/sb_timesong"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/white"
+        android:layout_marginTop="30sp"
+        android:thumbTint="@color/blue_500"/>
+
+    <LinearLayout
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_startsong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:text="00.00"/>
+        <TextView
+            android:id="@+id/tv_endsong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="right"
+            android:text="00.00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/prevsong_button"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@drawable/ic_prev_button"
+            android:layout_centerVertical="true"/>
+        <Button
+            android:id="@+id/playsong_button"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@drawable/ic_pause_button"
+            android:layout_marginHorizontal="40sp"/>
+
+        <Button
+            android:id="@+id/nextsong_button"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:background="@drawable/ic_next_button"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>
